@@ -2,33 +2,28 @@
     <data>
 
         <record id="view_account_analytic_line_tree_inherit_start_stop" model="ir.ui.view">
-            <field name="name">account.analytic.line.tree.start_stop</field>
-            <field name="model">account.analytic.line</field>
-            <field name="inherit_id" ref="timesheet_grid.hr_timesheet_line_tree"/>
-            <field name="arch" type="xml">
+    <field name="name">account.analytic.line.tree.start_stop</field>
+    <field name="model">account.analytic.line</field>
+    <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree"/>
+    <field name="arch" type="xml">
 
-                <!-- Highlight lines where a break is active 
-                <xpath expr="//tree" position="attributes">
-                    <attribute name="decoration-danger">break_time != False</attribute>
-                </xpath>
-                -->
-                <!-- Make unit_amount read-only -->
-                <xpath expr="//field[@name='unit_amount']" position="attributes">
-                    <attribute name="readonly">1</attribute>
-                </xpath>
+        <!-- Example customizations -->
+        <xpath expr="//field[@name='unit_amount']" position="attributes">
+            <attribute name="readonly">1</attribute>
+        </xpath>
 
-                <!-- Insert timing fields and buttons before unit_amount -->
-                <xpath expr="//field[@name='unit_amount']" position="before">
-                    <field name="start_time"/>
-                    <field name="break_time"/>
-                    <field name="end_time"/>
-                    <button name="button_break" type="object" string="Break" icon="fa-pause" class="btn btn-sm btn-danger"/>
-                    <button name="button_resume" type="object" string="Resume" icon="fa-play" class="btn btn-sm btn-success"/>
-                    <field name="break_unit_amount" widget="timesheet_uom" sum="Total"/>
-                </xpath>
+        <xpath expr="//field[@name='unit_amount']" position="before">
+            <field name="start_time"/>
+            <field name="break_time"/>
+            <field name="end_time"/>
+            <button name="button_break" type="object" string="Break" icon="fa-pause" class="btn btn-sm btn-danger"/>
+            <button name="button_resume" type="object" string="Resume" icon="fa-play" class="btn btn-sm btn-success"/>
+            <field name="break_unit_amount" widget="timesheet_uom" sum="Total"/>
+        </xpath>
 
-            </field>
-        </record>
+    </field>
+</record>
+
 
     </data>
 </odoo>
