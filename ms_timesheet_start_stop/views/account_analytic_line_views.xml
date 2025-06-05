@@ -7,11 +7,11 @@
             <field name="inherit_id" ref="timesheet_grid.hr_timesheet_line_tree"/>
             <field name="arch" type="xml">
 
-                <!-- Highlight lines where a break is active -->
+                <!-- Highlight lines where a break is active 
                 <xpath expr="//tree" position="attributes">
                     <attribute name="decoration-danger">break_time != False</attribute>
                 </xpath>
-
+                -->
                 <!-- Make unit_amount read-only -->
                 <xpath expr="//field[@name='unit_amount']" position="attributes">
                     <attribute name="readonly">1</attribute>
