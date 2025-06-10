@@ -15,7 +15,7 @@
         "base",
         "analytic",
         "hr_timesheet",
-        "helpdesk",
+     <!--   "helpdesk", --> 
     ],
     "data": [
         "views/account_analytic_line_views.xml",
