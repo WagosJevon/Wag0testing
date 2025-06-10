@@ -1,0 +1,15 @@
+<odoo>
+    <record id="view_helpdesk_ticket_form_inherit_timesheet" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.inherit.timesheet</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk_timesheet.view_helpdesk_ticket_form_timesheet"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='timesheet']" position="inside">
+                <group string="Timesheet Details" col="2">
+                    <field name="start_time"/>
+                    <field name="end_time"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
