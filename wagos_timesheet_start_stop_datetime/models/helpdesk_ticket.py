@@ -1,3 +1,4 @@
+<!--
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api, _
@@ -18,3 +19,4 @@ class HelpdeskTicket(models.Model):
                 rec.unit_amount = duration.total_seconds() / 3600.0
             else:
                 rec.unit_amount = 0.0
+-->
