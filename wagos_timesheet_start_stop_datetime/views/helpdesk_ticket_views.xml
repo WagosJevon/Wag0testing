@@ -1,3 +1,4 @@
+<!--
 <odoo>
     <record id="view_helpdesk_ticket_form_inherit_timesheet" model="ir.ui.view">
         <field name="name">helpdesk.ticket.form.inherit.timesheet</field>
@@ -13,3 +14,4 @@
         </field>
     </record>
 </odoo>
+-->
